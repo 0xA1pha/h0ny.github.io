@@ -2,7 +2,7 @@
 layout: post
 title: Privilege - 春秋云镜
 category: [春秋云镜]
-tags: [active directory pentesting, wordpress, gitlab]
+tags: [active directory pentesting, wordpress, gitlab, privilege escalation]
 ---
 
 ![image.png](https://raw.githubusercontent.com/h0ny/repo/main/images/1954286803c1fbd8.png)
@@ -246,6 +246,7 @@ flag01: flag{8ccde3ae-64ea-4c34-bd0f-02d50c587e14}
 ## 第 2 关
 
 关卡剧情：
+
 管理员为 Jenkins 配置了 Gitlab，请尝试获取 Gitlab API Token，并最终获取 Gitlab 中的敏感仓库。获取敏感信息后，尝试连接至 Oracle 数据库，并获取 ORACLE 服务器控制权限。
 
 ---
@@ -477,6 +478,7 @@ b'   __ _                      _               (_)           _      \n  / _` |  
 ## 第 3 关
 
 关卡剧情：
+
 攻击办公区内网，获取办公 PC 控制权限，并通过特权滥用提升至 SYSTEM 权限。
 
 ---
@@ -752,6 +754,7 @@ flag03: flag{760e1025-9d84-4c28-8af9-d45e9f770734}
 ## 第 4 关
 
 关卡剧情：
+
 尝试接管备份管理操作员帐户，并通过转储 NTDS 获得域管理员权限，最终控制整个域环境。
 
 ---
