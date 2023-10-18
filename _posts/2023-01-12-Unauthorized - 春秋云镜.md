@@ -13,14 +13,14 @@ tags: [active directory pentesting, adcs, shadow credentials]
 
 Unauthorized是一套难度为中等的靶场环境，完成该挑战可以帮助玩家了解内网渗透中的代理转发、内网扫描、信息收集、特权提升以及横向移动技术方法，加强对域环境核心认证机制的理解，以及掌握域环境渗透中一些有趣的技术要点。该靶场共有3个flag，分布于不同的靶机。
 
-| Internal address | Host or FQDN | Description |
+| Intranet Address | Host or FQDN | Description |
 | --- | --- | --- |
 | 172.22.7.13 | localhost | 外网 docker 宿主机 |
 | 172.22.7.67 | WIN-9BMCSG0S.XIAORANG.LAB | IIS + FTP 服务器 |
 | 172.22.7.31 | ADCS.XIAORANG.LAB | Active Directory 证书服务 (AD CS) |
 | 172.22.7.6  | DC02.XIAORANG.LAB | DC |
 
-## External Host
+## Internet
 
 ### Recon - fscan
 
@@ -142,7 +142,7 @@ exit
 root@localhost:~# 
 ```
 
-## Internal Host
+## Intranet
 
 使用 fscan 扫描内网：`.\fscan64 -h 172.22.7.6/24`
 ```
