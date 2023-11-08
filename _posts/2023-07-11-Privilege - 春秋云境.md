@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Privilege - 春秋云镜
-category: [春秋云镜]
+title: Privilege - 春秋云境
+category: [春秋云境]
 tags: [active directory pentesting, wordpress, gitlab, privilege escalation]
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Delegation - 春秋云镜
-category: [春秋云镜]
+title: Delegation - 春秋云境
+category: [春秋云境]
 tags: [active directory pentesting, unconstrained delegation, weak services permission]
 ---
 
