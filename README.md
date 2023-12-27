@@ -27,12 +27,16 @@ Follow the instructions in the [Jekyll Docs](https://jekyllrb.com/docs/installat
 Then clone it to your local machine and run:
 
 ```
-$ bundle
+bundle
 ```
 
 ## Usage
 
 Please see the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy#documentation).
+
+## Upgrade
+
+[https://github.com/cotes2020/jekyll-theme-chirpy/wiki/Upgrade-Guide](https://github.com/cotes2020/jekyll-theme-chirpy/wiki/Upgrade-Guide)
 
 ## License
 
