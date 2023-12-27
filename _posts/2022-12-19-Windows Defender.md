@@ -11,7 +11,7 @@ tags: [windows defender, antivirus]
 
 ## 获取主机杀软信息
 
-使用 wmic 获取杀软信息：
+利用 WMI 获取主机杀软信息：
 
 ```console
 C:\Users\test\Desktop>WMIC.exe /Node:localhost /Namespace:\\root\SecurityCenter2 Path AntiVirusProduct Get /Format:List
@@ -26,12 +26,11 @@ timestamp=Wed, 07 Sep 2022 09:05:13 GMT
 C:\Users\test\Desktop>:: 只显示 Anti-Viruses 名称
 C:\Users\test\Desktop>WMIC.exe /node:localhost /namespace:\\root\SecurityCenter2 path AntiVirusProduct Get DisplayName | findstr /V /B /C:displayName || echo No Antivirus installed
 Windows Defender
-```
 
-在 PowerShell 中使用 CimCmdlets 查询杀软信息：
-
-```
-Get-CimInstance -Namespace "root\SecurityCenter2" -ClassName AntiVirusProduct -ComputerName localhost | Format-List
+C:\Users\test\Desktop>:: 在 PowerShell 中使用 CimCmdlets 查询杀软信息
+C:\Users\test\Desktop>powershell -command "(Get-CimInstance -Namespace root/SecurityCenter2 -ClassName AntivirusProduct).displayName"
+Windows Defender
+Kaspersky
 ```
 
 ## 管理 Microsoft Defender - CMD
