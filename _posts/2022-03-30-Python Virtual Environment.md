@@ -34,14 +34,14 @@ Windows 下的目录结构：
 使用示例：
 
 ```
-PS C:\> python3 -m venv env
-PS C:\> .\env\Scripts\activate
-(env) PS C:\> pip list
+PS C:\> python3 -m venv .venv
+PS C:\> .\.venv\Scripts\activate  # pipenv shell
+(.venv) PS C:\> pip list
 Package    Version
 ---------- -------
 pip        23.1.2
 setuptools 65.5.0
-(env) PS C:\> deactivate
+(.venv) PS C:\> deactivate    # exit
 PS C:\>
 ```
 
