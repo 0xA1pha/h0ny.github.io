@@ -6,6 +6,7 @@ order: 5
 
 | 昵称       | 网址                                                                                             |
 | ---------- | ------------------------------------------------------------------------------------------------ |
+| 竹林寺 🎍  | [https://zlte.netlify.app/](https://zlte.netlify.app/ "竹林寺 🎍")                               |
 | 行之 🕊️    | [https://xingzhi.ink/](https://xingzhi.ink/ "行之 🕊️")                                           |
 | 言喻 🍗    | [http://47.96.136.87/](http://47.96.136.87/ "言喻 🍗")                                           |
 | 叶枫 🃏    | [https://www.cnblogs.com/lymf/default.html](https://www.cnblogs.com/lymf/default.html "叶枫 🃏") |
