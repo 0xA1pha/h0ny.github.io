@@ -503,8 +503,6 @@ SeIncreaseWorkingSetPrivilege Increase a process working set Enabled
 
 ### Dll Hijacking
 
-Privilege escalation from Chris to root
-
 在 C 盘中，找到一个 Snort 目录：
 
 ```console
