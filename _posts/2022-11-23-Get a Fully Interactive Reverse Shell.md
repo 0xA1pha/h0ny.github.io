@@ -27,6 +27,14 @@ not a tty
 
 当前获取到的 reverse shell 还存在诸多限制，如：无法使用 top 这类命令，ctrl+c 会中断整个 reverse shell 等。
 
+---
+
+Reverse Shell Cheat Sheet：
+
+- https://www.revshells.com/
+- https://alamot.github.io/reverse_shells/
+- https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/shell-reverse-cheatsheet/
+
 ## Upgrade Reverse Shell
 
 TTY 是英文 Teletype 的缩写，译为电传打字机，简称电传。现在通常泛指类 Unix 操作系统中的虚拟控制台。
@@ -175,6 +183,8 @@ Windows PowerShell
 PS C:\> whoami
 ...
 ```
+
+
 
 ## References
 
