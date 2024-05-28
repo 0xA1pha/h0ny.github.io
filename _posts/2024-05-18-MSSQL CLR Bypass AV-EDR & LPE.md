@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MSSQL CLR Bypass AV/EDR & LEP
+title: MSSQL CLR Bypass AV/EDR & LPE
 category: 渗透测试
 tags: [mssql, clr, bypass, antivirus]
 ---
@@ -9,7 +9,7 @@ tags: [mssql, clr, bypass, antivirus]
 
 在最近的一次攻防中，一个内网环境成功把我整麻了，把我这辈子听过的国产终端防护产品都见了个遍，从 360 安全卫士、QAX 天擎、到火绒、腾讯电脑管家，甚至连瑞星杀毒都见到了 😭。
 
-以下是我在利用 MSSQL CLR 进行本地提权（Local Privilege Escalation, LEP），并绕过终端防护的经历。
+以下是我在利用 MSSQL CLR 进行本地提权（Local Privilege Escalation, LPE），并绕过终端防护的经历。
 
 ## CLR 介绍
 
