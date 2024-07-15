@@ -179,7 +179,7 @@ Remounted /system_dlkm as RW
 Remounted /system_ext as RW
 Remount succeeded
 
-PS C:\> adb push 9a5ba575.0 /system/etc/security/cacerts/
+PS C:\> adb push 9a5ba575.0 /system/etc/security/cacerts/9a5ba575.0
 9a5ba575.0: 1 file pushed, 0 skipped. 5.8 MB/s (4322 bytes in 0.001s)
 
 PS C:\> adb shell
@@ -189,18 +189,18 @@ emu64xa:/ # reboot
 
 网络配置：关闭【WIFI】，打开【T-Mobile/移动网络】
 
-![alt text](<https://raw.githubusercontent.com/h0ny/repo/main/images/b9126f178611c607.png>)
+![alt text](https://raw.githubusercontent.com/h0ny/repo/main/images/b9126f178611c607.png)
 
 在 Android Emulator 设置中配置系统代理，为 Windows 主机的 IP 地址：
 
-![alt text](<https://raw.githubusercontent.com/h0ny/repo/main/images/a2ebf52c1d6c9097.png>)
+![alt text](https://raw.githubusercontent.com/h0ny/repo/main/images/a2ebf52c1d6c9097.png)
 
 Windows ipconfig 命令查看网络地址：
 
 ```
 无线局域网适配器 WLAN:
 
-   连接特定的 DNS 后缀 . . . . . . . : 
+   连接特定的 DNS 后缀 . . . . . . . :
    IPv4 地址 . . . . . . . . . . . . : 192.168.199.181
    子网掩码  . . . . . . . . . . . . : 255.255.255.0
    默认网关. . . . . . . . . . . . . : 192.168.199.1
@@ -241,6 +241,3 @@ WSA 用户可以使用 [WSA 工具箱 - 微软应用商店](https://apps.microso
 - [Burp Suite Android Emulator: Complete Guide](https://infosecwriteups.com/burp-suite-android-emulator-5c030d420394)
 - [How to configure Burp Suite proxy with an Android emulator?](https://secabit.medium.com/how-to-configure-burp-proxy-with-an-android-emulator-31b483237053)
 - [Android 11 tightens restrictions on CA certificates](https://httptoolkit.com/blog/android-11-trust-ca-certificates/)
-
-
-
