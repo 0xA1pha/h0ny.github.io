@@ -219,6 +219,26 @@ sqlite3 /data/data/com.android.providers.settings/databases/settings.db "SELECT 
 sqlite3 /data/data/com.android.providers.settings/databases/settings.db "DELETE FROM system WHERE _id=99"
 ```
 
+使用 adb 命令，快速进入设置页面：
+
+```
+adb shell am start -n com.android.settings/com.android.settings.Settings
+```
+
+使用 adb 命令配置全局 http 代理：
+
+```
+# 设置全局代理
+adb connect 127.0.0.1:58526
+adb shell settings put global http_proxy 192.168.56.1:8888
+
+#删除全局代理
+adb shell settings delete global http_proxy
+adb shell settings delete global global_http_proxy_host
+adb shell settings delete global global_http_proxy_port
+adb shell settings delete global global_http_proxy_port
+```
+
 > 注：sqlite 是 Android 系统采用的微型数据库，可以通过写入数据到数据库的方式来更新系统代理设置。（未进行测试）
 
 安装 APK：
