@@ -5,7 +5,7 @@ category: Development
 tags: [remote, ssh, vscode]
 ---
 
-以下是使用 vscode 连接远程 windows 服务器进行开发的配置步骤。
+以下是使用 vscode 连接远程 windows 服务器进行开发的配置步骤。（远程写代码是真的痛苦 🥴，能本地还是本地吧。）
 
 在远程 windows 主机安装 ssh 服务端。
 
