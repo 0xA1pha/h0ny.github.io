@@ -148,7 +148,6 @@ from mitmproxy import ctx
 
 def request(flow: http.HTTPFlow) -> None:
     # 处理从 Burp 返回的请求包流量
-    #  if "crm.11185.cn" in flow.request.host:
     if "example.com" in flow.request.host:
         flow.request.headers["X-Processed-By"] = "mitmproxy"
         # 打印经过 Burp 修改后的请求体
