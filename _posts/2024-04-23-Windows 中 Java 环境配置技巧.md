@@ -46,7 +46,10 @@ C:\> ftype jarfile="C:\Program Files\Java\jdk1.8\bin\javaw.exe" -jar "%1" %*
 --add-opens javafx.controls/com.sun.javafx.scene.control.skin=ALL-UNNAMED --module-path c:\java\javafx\lib --add-modules javafx.controls,javafx.web
 ```
 
+> 在 Mac 中，如果需要在命令行中频繁切换 JDK 环境，可以使用 jenv 工具。  
+> 使用方法推荐看文章：https://www.wulicode.com/java/tech/jenv.html
+
 参考文章：
 
-- https://www.b4x.com/android/forum/threads/running-jar-with-double-click-in-java-openjdk-11.140605/
-- https://answers.microsoft.com/en-us/windows/forum/all/jar-files-only-executable-trough-cmd-terminal-java/47b4bd5d-c835-490a-ad2d-34cb745ccc2e
+-   https://www.b4x.com/android/forum/threads/running-jar-with-double-click-in-java-openjdk-11.140605/
+-   https://answers.microsoft.com/en-us/windows/forum/all/jar-files-only-executable-trough-cmd-terminal-java/47b4bd5d-c835-490a-ad2d-34cb745ccc2e
