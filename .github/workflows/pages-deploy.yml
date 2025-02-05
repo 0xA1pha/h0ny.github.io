@@ -64,7 +64,7 @@ jobs:
             \-\-ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/,/^http:\/\/*/"
 
       - name: Archive production artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
             name: built-site  # 构件的名称
             path: _site/      # 要包含在构件中的路径，这里是Jekyll生成的站点目录
